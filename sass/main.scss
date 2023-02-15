@@ -1,0 +1,317 @@
+@import './variables';
+
+@mixin font {
+    font-family: map-get($font-familys , Vazirmatn);
+    font-weight: map-get($font-familys, regular);
+}
+
+
+body {
+    direction: rtl;
+    background-color: map-get($background-colors, starting-information);
+}
+
+.starting-information {
+    height: 83px;
+    background-color: map-get($background-colors, starting-information);
+
+    p {
+        @include font();
+        font-size: calc(13px + 0.5vw);
+    }
+
+    .social-media-icons {
+        width: calc(200px + 0.5vw);
+        height: 41.5px;
+    }
+}
+
+
+.formen .text-part {
+    @include font();
+
+    a:hover {
+        text-decoration: underline yellow !important;
+    }
+
+    p {
+        font-size: calc(12px + 0.5vw);
+    }
+}
+
+.formen {
+    cursor: pointer;
+
+    img {
+        transition: all 500ms linear;
+        // filter: blur(2px);
+        filter: brightness(70%);
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+
+
+.nav {
+    height: 80px;
+    background-color: map-get($background-colors , nav-background);
+
+    .nav-list a {
+        @include font();
+        color: map-get($background-colors, nav-font-color);
+        transition: all 400ms linear;
+        font-size: calc(11px + 0.5vw);
+
+        &:hover {
+            color: #f1be48;
+        }
+    }
+
+    .nav-list .products {
+        width: 90px;
+        height: 50px;
+        background-color: #f1be48;
+        border-radius: 12px;
+        transition: all 400ms linear;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #c2a666;
+        }
+    }
+}
+
+.products {
+    background-color: map-get($background-colors , nav-background);
+
+    .cinere-logo-products {
+        cursor: pointer;
+        transition: all 200ms linear;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    }
+
+    .product-part-explanation {
+        width: 70%;
+        text-align: justify;
+        margin: 20px auto;
+        @include font();
+        font-size: calc(11px + 0.5vw);
+        line-height: 40px;
+        color: map-get($background-colors, product-part);
+    }
+}
+
+.product-items .item {
+    @include font();
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.popularProducts {
+    background-color: map-get($background-colors, nav-background);
+
+    .PopularExplanation {
+        @include font();
+        font-size: calc(12px + 0.5vw);
+        color: #9b865c;
+    }
+
+    .popularitem {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+
+        p {
+            @include font();
+            font-size: calc(13px + 0.5vw);
+        }
+    }
+}
+
+.cinereMagazine {
+    background-color: map-get($background-colors, Magazine-Background);
+
+    .MagazineTitle {
+        @include font();
+        color: white;
+    }
+
+    .image-item {
+        border-radius: 12px 12px 0px 0px !important;
+        overflow: hidden;
+
+    }
+
+    .text-item {
+        width: 95%;
+        background-color: #f1be48;
+        @include font();
+        border-radius: 12px 12px 0px 0px !important;
+    }
+
+    .MagazineItem {
+        cursor: pointer;
+    }
+}
+
+
+.footer {
+    background-color: white;
+
+    .searcherNatureIcon {
+        @include font();
+        font-size: calc(16px + 0.5vw);
+        font-weight: map-get($font-familys , Bold);
+        color: #f1be48;
+    }
+
+    .SearcherNatureEX {
+        @include font();
+        color: map-get($background-colors, product-part);
+        font-size: calc(11px + 0.5vw);
+        line-height: 30px;
+    }
+
+    .searcherNature .reseacherButton {
+        width: 160px;
+        height: 50px;
+        @include font();
+        background-color: #f1be48;
+        color: white;
+        border-radius: 5px;
+        transition: all 350ms ease;
+        border: 0;
+        outline: 0;
+
+        &:hover {
+            background-color: #a19067;
+        }
+    }
+
+    .aboutcinere {
+        border-bottom: 1px solid black;
+    }
+}
+
+.ProductSlider .Slide {
+    height: 600px;
+    background-color: beige;
+
+    .SlideExplanation {
+        @include font();
+        color: #9b865c;
+        font-size: calc(14px + 0.5vw);
+    }
+}
+
+.SlideButtons {
+    width: 100%;
+    height: 50px;
+
+    button {
+        width: 40px;
+        height: 40px;
+        background-color: beige;
+        @include font();
+        font-size: 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+        transition: all 300ms ease;
+
+        &:hover {
+            background-color: rgb(172, 172, 167);
+        }
+    }
+}
+
+@mixin BeforeMedium {
+    @media all and (max-width:767px) {
+        @content;
+    }
+}
+
+@include BeforeMedium {
+    .nav-list {
+        width: 100% !important;
+        position: relative;
+
+        ul {
+            position: absolute;
+            top: 0;
+            height: 300px;
+            background-color: white;
+            transition: all 300ms ease;
+            overflow: hidden;
+
+            li {
+                height: 60px;
+                @include font();
+            }
+        }
+    }
+
+    .list-menu-button {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        cursor: pointer;
+        left: 20px;
+    }
+}
+
+@mixin AfterMedium {
+    @media all and (min-width:768px) {
+        @content;
+    }
+}
+
+@include AfterMedium {
+    .starting-information {
+        height: 60px;
+    }
+    .SlideExplanation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        h4{
+            margin-right: 32px;
+        }
+        .xxx{
+            @include font();
+            color: #9b865c;
+        }
+    }
+    .sliderButton{
+        width: 160px;
+        height: 50px;
+        @include font();
+        background-color: #f1be48;
+        color: white;
+        border-radius: 5px;
+        transition: all 350ms ease;
+        border: 0;
+        outline: 0;
+        right: 33px;
+        &:hover{
+            background-color: #92908b;
+        }
+    }
+}
+
+
+.hidden {
+    height: 0px !important;
+}
+
+.hidden-slide {
+    display: none;
+}

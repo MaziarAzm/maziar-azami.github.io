@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500&display=swap");
+body {
+  direction: rtl;
+  background-color: #cdcdcd;
+}
+
+.starting-information {
+  height: 83px;
+  background-color: #cdcdcd;
+}
+.starting-information p {
+  font-family: "Vazirmatn";
+  font-size: calc(13px + 0.5vw);
+}
+.starting-information .social-media-icons {
+  width: calc(200px + 0.5vw);
+  height: 41.5px;
+}
+
+.formen .text-part {
+  font-family: "Vazirmatn";
+}
+.formen .text-part a:hover {
+  text-decoration: underline yellow !important;
+}
+.formen .text-part p {
+  font-size: calc(12px + 0.5vw);
+}
+
+.formen {
+  cursor: pointer;
+}
+.formen img {
+  transition: all 500ms linear;
+  filter: brightness(70%);
+}
+.formen:hover img {
+  transform: scale(1.1);
+}
+
+.nav {
+  height: 80px;
+  background-color: #f4f0f0;
+}
+.nav .nav-list a {
+  font-family: "Vazirmatn";
+  color: #9a9c9e;
+  transition: all 400ms linear;
+  font-size: calc(11px + 0.5vw);
+}
+.nav .nav-list a:hover {
+  color: #f1be48;
+}
+.nav .nav-list .products {
+  width: 90px;
+  height: 50px;
+  background-color: #f1be48;
+  border-radius: 12px;
+  transition: all 400ms linear;
+  cursor: pointer;
+}
+.nav .nav-list .products:hover {
+  background-color: #c2a666;
+}
+
+.products {
+  background-color: #f4f0f0;
+}
+.products .cinere-logo-products {
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+.products .cinere-logo-products:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.products .product-part-explanation {
+  width: 70%;
+  text-align: justify;
+  margin: 20px auto;
+  font-family: "Vazirmatn";
+  font-size: calc(11px + 0.5vw);
+  line-height: 40px;
+  color: #8c8b8b;
+}
+
+.product-items .item {
+  font-family: "Vazirmatn";
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.popularProducts {
+  background-color: #f4f0f0;
+}
+.popularProducts .PopularExplanation {
+  font-family: "Vazirmatn";
+  font-size: calc(12px + 0.5vw);
+  color: #9b865c;
+}
+.popularProducts .popularitem {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.popularProducts .popularitem p {
+  font-family: "Vazirmatn";
+  font-size: calc(13px + 0.5vw);
+}
+
+.cinereMagazine {
+  background-color: #418fde;
+}
+.cinereMagazine .MagazineTitle {
+  font-family: "Vazirmatn";
+  color: white;
+}
+.cinereMagazine .image-item {
+  border-radius: 12px 12px 0px 0px !important;
+  overflow: hidden;
+}
+.cinereMagazine .text-item {
+  width: 95%;
+  background-color: #f1be48;
+  font-family: "Vazirmatn";
+  border-radius: 12px 12px 0px 0px !important;
+}
+.cinereMagazine .MagazineItem {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: white;
+}
+.footer .searcherNatureIcon {
+  font-family: "Vazirmatn";
+  font-size: calc(16px + 0.5vw);
+  font-weight: 500;
+  color: #f1be48;
+}
+.footer .SearcherNatureEX {
+  font-family: "Vazirmatn";
+  color: #8c8b8b;
+  font-size: calc(11px + 0.5vw);
+  line-height: 30px;
+}
+.footer .searcherNature .reseacherButton {
+  width: 160px;
+  height: 50px;
+  font-family: "Vazirmatn";
+  background-color: #f1be48;
+  color: white;
+  border-radius: 5px;
+  transition: all 350ms ease;
+  border: 0;
+  outline: 0;
+}
+.footer .searcherNature .reseacherButton:hover {
+  background-color: #a19067;
+}
+.footer .aboutcinere {
+  border-bottom: 1px solid black;
+}
+
+.ProductSlider .Slide {
+  height: 600px;
+  background-color: beige;
+}
+.ProductSlider .Slide .SlideExplanation {
+  font-family: "Vazirmatn";
+  color: #9b865c;
+  font-size: calc(14px + 0.5vw);
+}
+
+.SlideButtons {
+  width: 100%;
+  height: 50px;
+}
+.SlideButtons button {
+  width: 40px;
+  height: 40px;
+  background-color: beige;
+  font-family: "Vazirmatn";
+  font-size: 20px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  transition: all 300ms ease;
+}
+.SlideButtons button:hover {
+  background-color: rgb(172, 172, 167);
+}
+
+@media all and (max-width: 767px) {
+  .nav-list {
+    width: 100% !important;
+    position: relative;
+  }
+  .nav-list ul {
+    position: absolute;
+    top: 0;
+    height: 300px;
+    background-color: white;
+    transition: all 300ms ease;
+    overflow: hidden;
+  }
+  .nav-list ul li {
+    height: 60px;
+    font-family: "Vazirmatn";
+  }
+  .list-menu-button {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    left: 20px;
+  }
+}
+@media all and (min-width: 768px) {
+  .starting-information {
+    height: 60px;
+  }
+  .SlideExplanation {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .SlideExplanation h4 {
+    margin-right: 32px;
+  }
+  .SlideExplanation .xxx {
+    font-family: "Vazirmatn";
+    color: #9b865c;
+  }
+  .sliderButton {
+    width: 160px;
+    height: 50px;
+    font-family: "Vazirmatn";
+    background-color: #f1be48;
+    color: white;
+    border-radius: 5px;
+    transition: all 350ms ease;
+    border: 0;
+    outline: 0;
+    right: 33px;
+  }
+  .sliderButton:hover {
+    background-color: #92908b;
+  }
+}
+.hidden {
+  height: 0px !important;
+}
+
+.hidden-slide {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
